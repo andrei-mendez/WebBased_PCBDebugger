@@ -82,7 +82,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "http://localhost:8000"
+    "http://localhost:8000",
+    "https://webbased-pcbdebugger.onrender.com"
 ]
 
 app.add_middleware(
