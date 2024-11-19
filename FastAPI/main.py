@@ -94,9 +94,9 @@ app.add_middleware(
 )
 
 # MongoDB Connection
-mongodb_uri = 'mongodb://129.120.61.61:27017/PCB_DebbuggerDB'
+mongodb_uri = 'mongodb://localhost:27017/DebuggerData'
 client = AsyncIOMotorClient(mongodb_uri)
-database = client["PCB_DebuggerDB"]
+database = client["DebuggerData"]
 users = database["Users"]
 
 
