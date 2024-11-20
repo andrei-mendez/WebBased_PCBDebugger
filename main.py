@@ -80,19 +80,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> TokenData:
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:3000",
-    "http://localhost:8000",
-    "https://webbased-pcbdebugger.onrender.com"
-]
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # MongoDB Connection
 mongodb_uri = 'mongodb://localhost:27017/DebuggerData'
